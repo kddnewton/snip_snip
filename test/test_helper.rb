@@ -3,6 +3,11 @@ SimpleCov.start do
   add_filter '/test'
 end
 
+if ENV['CI']
+  require 'coveralls'
+  Coveralls.wear!
+end
+
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
 

@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '>= 5.0.0.beta4', '< 5.1'
 
+  s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rubocop'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
