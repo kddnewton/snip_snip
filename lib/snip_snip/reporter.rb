@@ -7,26 +7,38 @@ module SnipSnip
       end
     end
 
-    class << self
-      def find_records
-        Registry.each_record.each_with_object([]) do |record, records|
-          accessed = record.accessed_fields
-          unused = (record.attributes.keys - accessed)
-          next if unused.empty?
+    attr_accessor :results
 
-          primary_key = record.class.primary_key
-          records << Result.new(record.class.name, record.send(primary_key), unused)
-        end
-      end
+    def initialize
+      self.results = find_results
+    end
 
-      def report(controller)
-        found = find_records
-        return if found.empty?
-        SnipSnip.logger.info("#{controller.controller_name}##{controller.action_name}")
-        found.sort_by(&:report).each { |result| SnipSnip.logger.info("  #{result.report}") }
-      ensure
-        Registry.clear
+    def report(controller)
+      return if results.empty?
+
+      SnipSnip.logger.info("#{controller.controller_name}##{controller.action_name}")
+      results.sort_by(&:report).each do |result|
+        SnipSnip.logger.info("  #{result.report}")
       end
+    ensure
+      Registry.clear
+    end
+
+    private
+
+    def find_results
+      Registry.each_record.each_with_object([]) do |record, records|
+        accessed = record.accessed_fields
+        unused = (record.attributes.keys - accessed)
+        next if unused.empty?
+
+        primary_key = record.class.primary_key
+        records << Result.new(record.class.name, record.send(primary_key), unused)
+      end
+    end
+
+    def self.report(controller)
+      new.report(controller)
     end
   end
 end
