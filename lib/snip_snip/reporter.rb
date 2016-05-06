@@ -24,6 +24,10 @@ module SnipSnip
       Registry.clear
     end
 
+    def self.report(controller)
+      new.report(controller)
+    end
+
     private
 
     def find_results
@@ -35,10 +39,6 @@ module SnipSnip
         primary_key = record.class.primary_key
         records << Result.new(record.class.name, record.send(primary_key), unused)
       end
-    end
-
-    def self.report(controller)
-      new.report(controller)
     end
   end
 end
