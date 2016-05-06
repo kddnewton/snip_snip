@@ -1,6 +1,7 @@
 # SnipSnip
 
 [![Build Status](https://travis-ci.org/kddeisz/snip_snip.svg?branch=master)](https://travis-ci.org/kddeisz/snip_snip)
+[![Coverage Status](https://coveralls.io/repos/github/kddeisz/snip_snip/badge.svg?branch=master)](https://coveralls.io/github/kddeisz/snip_snip?branch=master)
 
 SnipSnip tells you what you selected that you shouldn't have in a Rails controller action.
 
