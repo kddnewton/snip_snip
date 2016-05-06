@@ -1,5 +1,7 @@
 # SnipSnip
 
+[![Build Status](https://travis-ci.org/kddeisz/snip_snip.svg?branch=master)](https://travis-ci.org/kddeisz/snip_snip)
+
 SnipSnip tells you what you selected that you shouldn't have in a Rails controller action.
 
 ## Usage
