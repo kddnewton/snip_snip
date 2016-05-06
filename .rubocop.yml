@@ -1,0 +1,15 @@
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - 'test/**/*'
+  TargetRubyVersion: 2.3
+
+Metrics/LineLength:
+  Max: 117
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
