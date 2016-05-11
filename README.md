@@ -9,7 +9,7 @@ SnipSnip tells you what you selected that you shouldn't have in a Rails controll
 
 Add `SnipSnip` to your Gemfile:
 
-    $ gem 'snip_snip'
+    $ gem 'snip_snip', group: %i[test development]
 
 Open `snip-snip.log`:
 
