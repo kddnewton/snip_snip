@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['lib/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  s.add_dependency 'rails', '>= 5.0.0.beta4', '< 5.1'
+  s.add_dependency 'rails', '>= 5.0.0.beta'
 
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rubocop'

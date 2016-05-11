@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     snip_snip (0.0.1)
-      rails (>= 5.0.0.beta4, < 5.1)
+      rails (>= 5.0.0.beta)
 
 GEM
   remote: https://rubygems.org/
@@ -151,4 +151,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.12.2
+   1.12.3
