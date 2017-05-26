@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class IntegrationTest < ActionDispatch::IntegrationTest
-
   test 'GET /action1' do
     assert_logged([]) { get action1_path }
   end

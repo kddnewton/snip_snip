@@ -1,8 +1,5 @@
-# frozen_string_literal: true
-
 module SnipSnip
   class Filter
-
     attr_accessor :filtered
 
     def initialize(filtered = [])

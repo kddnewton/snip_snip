@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-require 'forwardable'
 require 'logger'
 
 require 'snip_snip/filter'

@@ -1,10 +1,6 @@
-# frozen_string_literal: true
-
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-
 require 'snip_snip/version'
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'snip_snip'
   s.version     = SnipSnip::VERSION

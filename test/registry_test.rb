@@ -2,7 +2,6 @@ require 'test_helper'
 
 module SnipSnip
   class RegistryTest < ActiveSupport::TestCase
-
     test '#clear' do
       registry = Registry.new
       registry.records = [:a, :b, :c]

@@ -1,5 +1,4 @@
 class LoggerDouble
-
   attr_accessor :output
 
   def initialize

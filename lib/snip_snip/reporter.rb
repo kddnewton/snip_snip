@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module SnipSnip
   class Reporter
     Result = Struct.new(:class_name, :primary_key, :unused) do

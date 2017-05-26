@@ -1,8 +1,5 @@
-# frozen_string_literal: true
-
 module SnipSnip
   class Registry
-
     attr_accessor :records
 
     def initialize
@@ -23,11 +20,16 @@ module SnipSnip
     end
 
     class << self
-      extend Forwardable
-      def_delegators :instance, :clear, :each_record, :register
-
       def instance
         @instance ||= new
+      end
+
+      def method_missing(method, *args, &block)
+        respond_to_missing?(method) ? instance.public_send(method, *args, &block) : super
+      end
+
+      def respond_to_missing?(method)
+        instance.respond_to?(method)
       end
     end
   end

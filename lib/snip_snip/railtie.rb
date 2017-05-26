@@ -1,8 +1,5 @@
-# frozen_string_literal: true
-
 module SnipSnip
   class Railtie < Rails::Railtie
-
     initializer 'snip_snip.load_extensions' do
       ActiveSupport.on_load(:action_controller) do
         after_action { Reporter.report(self) }

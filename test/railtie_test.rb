@@ -2,7 +2,6 @@ require 'test_helper'
 
 module SnipSnip
   class RailtieTest < ActiveSupport::TestCase
-
     test 'controller callback loaded' do
       refute_empty Class.new(ActionController::Base)._process_action_callbacks
     end
