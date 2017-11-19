@@ -1,21 +1,29 @@
 module SnipSnip
+  # Handles outputting unnecessarily selected columns to the logs.
   class Reporter
-    Result = Struct.new(:class_name, :primary_key, :unused) do
-      def report
-        @report ||= "#{class_name} #{primary_key}: #{unused.sort.join(', ')}"
+    # Represents a result that has unused columns.
+    Result =
+      Struct.new(:class_name, :primary_key, :unused) do
+        # A string representing the unused columns for the given record.
+        def report
+          @report ||= "#{class_name} #{primary_key}: #{unused.sort.join(', ')}"
+        end
       end
-    end
 
-    attr_accessor :results
+    attr_reader :results
 
     def initialize
-      self.results = find_results
+      @results = find_results
     end
 
+    # Report on the unused columns that were selected during the course of the
+    # processing the action on the given controller.
     def report(controller)
       return if results.empty?
 
-      SnipSnip.logger.info("#{controller.controller_name}##{controller.action_name}")
+      action_display = "#{controller.controller_name}##{controller.action_name}"
+      SnipSnip.logger.info(action_display)
+
       results.sort_by(&:report).each do |result|
         SnipSnip.logger.info("  #{result.report}")
       end
@@ -23,6 +31,7 @@ module SnipSnip
       Registry.clear
     end
 
+    # Report on the specified controller.
     def self.report(controller)
       new.report(controller)
     end
@@ -33,11 +42,13 @@ module SnipSnip
       Registry.each_record.each_with_object([]) do |record, records|
         accessed = record.accessed_fields
         unused = (record.attributes.keys - accessed)
-        next if unused.empty?
-
-        primary_key = record.class.primary_key
-        records << Result.new(record.class.name, record.send(primary_key), unused)
+        records << result_from(record, unused) if unused.any?
       end
+    end
+
+    def result_from(record, unused)
+      primary_key = record.class.primary_key
+      Result.new(record.class.name, record.public_send(primary_key), unused)
     end
   end
 end
