@@ -11,7 +11,7 @@ module SnipSnip
       end
     end
 
-    teardown do
+    setup do
       Filter.instance_variable_set(:@instance, nil)
     end
 
