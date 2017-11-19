@@ -5,6 +5,16 @@ module SnipSnip
     Post = Class.new
     Comment = Class.new
 
+    class FilterDouble
+      def filtered?(_)
+        true
+      end
+    end
+
+    teardown do
+      Filter.instance_variable_set(:@instance, nil)
+    end
+
     test '#initialize' do
       assert_equal [ActiveRecord::InternalMetadata], Filter.new.filtered
     end
@@ -18,17 +28,10 @@ module SnipSnip
 
     test '::filtered?' do
       record = Post.new
-      mock = Minitest::Mock.new
-      mock.expect(:filtered?, true, [record])
 
-      Filter.stub(:instance, mock) do
+      Filter.stub(:new, FilterDouble.new) do
         assert Filter.filtered?(record)
-        mock.verify
       end
-    end
-
-    test '::instance' do
-      assert_kind_of Filter, Filter.instance
     end
   end
 end

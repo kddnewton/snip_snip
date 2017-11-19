@@ -3,11 +3,6 @@ SimpleCov.start do
   add_filter '/test'
 end
 
-if ENV['CI']
-  require 'coveralls'
-  Coveralls.wear!
-end
-
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
 
@@ -23,10 +18,12 @@ ActiveRecord::Schema.define do
   end
 end
 
-User.create!([
-  { first_name: 'Pants', last_name: 'King' },
-  { first_name: 'Pants', last_name: 'Queen' }
-])
+User.create!(
+  [
+    { first_name: 'Pants', last_name: 'King' },
+    { first_name: 'Pants', last_name: 'Queen' }
+  ]
+)
 
 Rails.application.routes.draw do
   get '/action1', to: 'users#action1', as: :action1
@@ -38,7 +35,7 @@ require 'minitest/mock'
 
 require 'support/logger_double'
 ActiveSupport::TestCase.include(Module.new do
-  def assert_logged(expected, &block)
+  def assert_logged(expected)
     old_logger = SnipSnip.logger
     logger_double = LoggerDouble.new
 
@@ -50,5 +47,6 @@ ActiveSupport::TestCase.include(Module.new do
   end
 end)
 
-# Filter out Minitest backtrace while allowing backtrace from other libraries to be shown.
+# Filter out Minitest backtrace while allowing backtrace from other libraries
+# to be shown.
 Minitest.backtrace_filter = Minitest::BacktraceFilter.new

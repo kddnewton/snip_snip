@@ -2,15 +2,8 @@ AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
   Exclude:
-    - 'test/**/*'
-    - 'vendor/**/*'
+  - 'vendor/**/*'
   TargetRubyVersion: 2.4
-
-Metrics/LineLength:
-  Max: 100
-
-Style/Documentation:
-  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false

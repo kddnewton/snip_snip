@@ -6,9 +6,11 @@ module SnipSnip
     FakeResult = Struct.new(:report)
 
     test '#initialize' do
-      first_user, second_user = [User.first, User.second]
-      [first_user.id, first_user.created_at, first_user.updated_at]
-      [second_user.first_name, second_user.last_name]
+      first_user = User.first
+      second_user = User.second
+
+      _ = [first_user.id, first_user.created_at, first_user.updated_at]
+      _ = [second_user.first_name, second_user.last_name]
 
       results = Reporter.new.results
 
@@ -23,7 +25,8 @@ module SnipSnip
 
     test '#report some' do
       reporter = Reporter.new
-      reporter.results = [FakeResult.new('1'), FakeResult.new('2')]
+      results = [FakeResult.new('1'), FakeResult.new('2')]
+      reporter.instance_variable_set(:@results, results)
 
       expected = ['c#a', '  1', '  2']
       assert_logged(expected) { reporter.report(FakeController.new('c', 'a')) }

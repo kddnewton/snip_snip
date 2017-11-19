@@ -3,18 +3,15 @@ require 'test_helper'
 module SnipSnip
   class RegistryTest < ActiveSupport::TestCase
     test '#clear' do
-      registry = Registry.new
-      registry.records = [:a, :b, :c]
-
+      registry = registry_with(%i[a b c])
       registry.clear
 
       assert_empty registry.records
     end
 
     test '#each_record no block' do
-      expected = [:a, :b, :c]
-      registry = Registry.new
-      registry.records = expected
+      expected = %i[a b c]
+      registry = registry_with(expected)
 
       actual = []
       registry.each_record { |record| actual << record }
@@ -38,6 +35,14 @@ module SnipSnip
 
     test '::instance' do
       assert_kind_of Registry, Registry.instance
+    end
+
+    private
+
+    def registry_with(records)
+      registry = Registry.new
+      registry.instance_variable_set(:@records, records)
+      registry
     end
   end
 end
