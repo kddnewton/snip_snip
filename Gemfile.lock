@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    snip_snip (0.0.2)
-      rails (~> 5.1, >= 5.0.0.beta)
+    snip_snip (0.0.3)
+      rails (>= 5.0.0.beta)
 
 GEM
   remote: https://rubygems.org/
@@ -73,7 +73,7 @@ GEM
       ast (~> 2.3)
     powerpack (0.1.1)
     rack (2.0.3)
-    rack-test (0.7.1)
+    rack-test (0.8.2)
       rack (>= 1.0, < 3)
     rails (5.1.4)
       actioncable (= 5.1.4)
@@ -136,6 +136,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rails (~> 5.1)
   rubocop
   simplecov
   snip_snip!

@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir['lib/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
-  spec.add_dependency 'rails', '~> 5.1', '>= 5.0.0.beta'
+  spec.add_dependency 'rails', '>= 5.0.0.beta'
 
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'simplecov'
