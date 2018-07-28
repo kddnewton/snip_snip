@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SnipSnip
   # A list of records that were found during the course of the last request
   # on which we are tracking columns.

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 module SnipSnip
@@ -6,7 +8,7 @@ module SnipSnip
     Comment = Class.new
 
     class FilterDouble
-      def filtered?(_)
+      def filtered?(_record)
         true
       end
     end

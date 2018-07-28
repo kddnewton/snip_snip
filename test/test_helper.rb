@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'simplecov'
 SimpleCov.start do
   add_filter '/test'
@@ -6,7 +8,7 @@ end
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
 
-require File.expand_path('../../test/dummy/config/application.rb', __FILE__)
+require File.expand_path('../test/dummy/config/application.rb', __dir__)
 
 Rails.application.initialize!
 

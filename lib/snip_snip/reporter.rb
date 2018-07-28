@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SnipSnip
   # Handles outputting unnecessarily selected columns to the logs.
   class Reporter

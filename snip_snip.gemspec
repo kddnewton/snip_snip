@@ -1,4 +1,6 @@
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'snip_snip/version'
 
 Gem::Specification.new do |spec|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SnipSnip
   # Hooks into Rails to track when columns are selected but not necessary.
   class Railtie < Rails::Railtie

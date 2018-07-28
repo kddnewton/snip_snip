@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SnipSnip
   # Classes to filter out of the tracking when looking at which columns were
   # selected.

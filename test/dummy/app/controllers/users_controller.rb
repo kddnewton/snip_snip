@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   def action1
     @users = User.find_each { |user| access_fields(user) }
