@@ -20,6 +20,7 @@ module SnipSnip
     # registry
     def each_record(&block)
       return to_enum(:each_record) unless block_given?
+
       records.each(&block)
     end
 
@@ -37,6 +38,7 @@ module SnipSnip
       # Delegate all missing methods to the singleton instance.
       def method_missing(method, *args, &block)
         return super unless respond_to_missing?(method)
+
         instance.public_send(method, *args, &block)
       end
 

@@ -10,6 +10,7 @@ module SnipSnip
       @filtered = filtered
 
       return unless ActiveRecord.const_defined?(:InternalMetadata)
+
       @filtered << ActiveRecord::InternalMetadata
     end
 
