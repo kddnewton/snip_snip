@@ -3,4 +3,4 @@ AllCops:
   DisplayStyleGuide: true
   Exclude:
   - 'vendor/**/*'
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.6

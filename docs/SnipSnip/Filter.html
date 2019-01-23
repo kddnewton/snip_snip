@@ -102,8 +102,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Classes to filter out of the tracking when looking at which columns were
-selected.</p>
+<p>Classes to filter out of the tracking when looking at which columns were selected.</p>
 
 
   </div>
@@ -271,20 +270,22 @@ selected.</p>
       <pre class="lines">
 
 
-7
-8
 9
 10
 11
-12</pre>
+12
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/filter.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/filter.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_filtered'>filtered</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='ivar'>@filtered</span> <span class='op'>=</span> <span class='id identifier rubyid_filtered'>filtered</span>
 
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'>ActiveRecord</span><span class='period'>.</span><span class='id identifier rubyid_const_defined?'>const_defined?</span><span class='lparen'>(</span><span class='symbol'>:InternalMetadata</span><span class='rparen'>)</span>
+
   <span class='ivar'>@filtered</span> <span class='op'>&lt;&lt;</span> <span class='const'>ActiveRecord</span><span class='op'>::</span><span class='const'>InternalMetadata</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -325,12 +326,12 @@ selected.</p>
       <pre class="lines">
 
 
-5
-6
-7</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/filter.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/filter.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_filtered'>filtered</span>
   <span class='ivar'>@filtered</span>
@@ -384,12 +385,12 @@ selected.</p>
       <pre class="lines">
 
 
-18
-19
-20</pre>
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/filter.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/filter.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_filtered?'>filtered?</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
   <span class='lparen'>(</span><span class='ivar'>@instance</span> <span class='op'>||=</span> <span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_filtered?'>filtered?</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
@@ -442,12 +443,12 @@ selected.</p>
       <pre class="lines">
 
 
-14
-15
-16</pre>
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/filter.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/filter.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_filtered?'>filtered?</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_filtered'>filtered</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_filter'>filter</span><span class='op'>|</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_filter'>filter</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -462,9 +463,9 @@ selected.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Dec  1 15:35:23 2017 by
+  Generated on Wed Jan 23 09:17:08 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.10 (ruby-2.4.2).
+  0.9.18 (ruby-2.6.0).
 </div>
 
     </div>

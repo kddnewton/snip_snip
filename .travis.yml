@@ -1,6 +1,5 @@
 language: ruby
-rvm:
-- 2.3.1
+rvm: 2.6.0
 cache: bundler
 script:
 - bundle exec rake

@@ -102,8 +102,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>A list of records that were found during the course of the last request on
-which we are tracking columns.</p>
+<p>A list of records that were found during the course of the last request on which we are tracking columns.</p>
 
 
   </div>
@@ -259,8 +258,7 @@ which we are tracking columns.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Wipe the registry clear of found objects so that we don&#39;t report on
-them twice.</p>
+<p>Wipe the registry clear of found objects so that we don&#39;t report on them twice.</p>
 </div></span>
   
 </li>
@@ -284,8 +282,7 @@ them twice.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Loop through each record that was found during the lifespan of this
-registry.</p>
+<p>Loop through each record that was found during the lifespan of this registry.</p>
 </div></span>
   
 </li>
@@ -373,12 +370,12 @@ registry.</p>
       <pre class="lines">
 
 
-7
-8
-9</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='id identifier rubyid_clear'>clear</span>
@@ -421,12 +418,12 @@ registry.</p>
       <pre class="lines">
 
 
-5
-6
-7</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_records'>records</span>
   <span class='ivar'>@records</span>
@@ -469,12 +466,12 @@ registry.</p>
       <pre class="lines">
 
 
-31
-32
-33</pre>
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_instance'>instance</span>
   <span class='ivar'>@instance</span> <span class='op'>||=</span> <span class='id identifier rubyid_new'>new</span>
@@ -510,16 +507,18 @@ registry.</p>
       <pre class="lines">
 
 
-36
-37
-38
-39</pre>
+39
+40
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>super</span> <span class='kw'>unless</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
+
   <span class='id identifier rubyid_instance'>instance</span><span class='period'>.</span><span class='id identifier rubyid_public_send'>public_send</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -566,12 +565,12 @@ registry.</p>
       <pre class="lines">
 
 
-42
-43
-44</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_instance'>instance</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
@@ -599,8 +598,7 @@ registry.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Wipe the registry clear of found objects so that we don&#39;t report on
-them twice.</p>
+<p>Wipe the registry clear of found objects so that we don&#39;t report on them twice.</p>
 
 
   </div>
@@ -614,12 +612,12 @@ them twice.</p>
       <pre class="lines">
 
 
-13
-14
-15</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear'>clear</span>
   <span class='ivar'>@records</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -641,8 +639,7 @@ them twice.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Loop through each record that was found during the lifespan of this
-registry</p>
+<p>Loop through each record that was found during the lifespan of this registry</p>
 
 
   </div>
@@ -656,16 +653,18 @@ registry</p>
       <pre class="lines">
 
 
-19
-20
 21
-22</pre>
+22
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_record'>each_record</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_to_enum'>to_enum</span><span class='lparen'>(</span><span class='symbol'>:each_record</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+
   <span class='id identifier rubyid_records'>records</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -699,12 +698,12 @@ registry</p>
       <pre class="lines">
 
 
-25
-26
-27</pre>
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/registry.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_records'>records</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_record'>record</span>
@@ -719,9 +718,9 @@ registry</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Dec  1 15:35:23 2017 by
+  Generated on Wed Jan 23 09:17:08 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.10 (ruby-2.4.2).
+  0.9.18 (ruby-2.6.0).
 </div>
 
     </div>

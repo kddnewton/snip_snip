@@ -246,8 +246,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Report on the unused columns that were selected during the course of the
-processing the action on the given controller.</p>
+<p>Report on the unused columns that were selected during the course of the processing the action on the given controller.</p>
 </div></span>
   
 </li>
@@ -285,12 +284,12 @@ processing the action on the given controller.</p>
       <pre class="lines">
 
 
-15
-16
-17</pre>
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/reporter.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/reporter.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@results</span> <span class='op'>=</span> <span class='id identifier rubyid_find_results'>find_results</span>
@@ -333,12 +332,12 @@ processing the action on the given controller.</p>
       <pre class="lines">
 
 
-13
-14
-15</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/reporter.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/reporter.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_results'>results</span>
   <span class='ivar'>@results</span>
@@ -381,12 +380,12 @@ processing the action on the given controller.</p>
       <pre class="lines">
 
 
-35
-36
-37</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/reporter.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/reporter.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='id identifier rubyid_controller'>controller</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='id identifier rubyid_controller'>controller</span><span class='rparen'>)</span>
@@ -414,8 +413,7 @@ processing the action on the given controller.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Report on the unused columns that were selected during the course of the
-processing the action on the given controller.</p>
+<p>Report on the unused columns that were selected during the course of the processing the action on the given controller.</p>
 
 
   </div>
@@ -429,8 +427,6 @@ processing the action on the given controller.</p>
       <pre class="lines">
 
 
-21
-22
 23
 24
 25
@@ -440,10 +436,12 @@ processing the action on the given controller.</p>
 29
 30
 31
-32</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/snip_snip/reporter.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/snip_snip/reporter.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='id identifier rubyid_controller'>controller</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -467,9 +465,9 @@ processing the action on the given controller.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Dec  1 15:35:23 2017 by
+  Generated on Wed Jan 23 09:17:08 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.10 (ruby-2.4.2).
+  0.9.18 (ruby-2.6.0).
 </div>
 
     </div>
