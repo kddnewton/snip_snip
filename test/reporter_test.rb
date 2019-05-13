@@ -11,8 +11,11 @@ module SnipSnip
       first_user = User.first
       second_user = User.second
 
-      _ = [first_user.id, first_user.created_at, first_user.updated_at]
-      _ = [second_user.first_name, second_user.last_name]
+      first_user.id
+      first_user.created_at
+      first_user.updated_at
+      second_user.first_name
+      second_user.last_name
 
       results = Reporter.new.results
 

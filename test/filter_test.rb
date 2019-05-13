@@ -13,9 +13,9 @@ module SnipSnip
       end
     end
 
-    setup do
-      Filter.instance_variable_set(:@instance, nil)
-    end
+    clear = -> { Filter.instance_variable_set(:@instance, nil) }
+    setup(&clear)
+    teardown(&clear)
 
     test '#initialize' do
       assert_equal [ActiveRecord::InternalMetadata], Filter.new.filtered
