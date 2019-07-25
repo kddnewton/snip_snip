@@ -1,7 +1,6 @@
 # SnipSnip
 
 [![Build Status](https://travis-ci.com/kddeisz/snip_snip.svg?branch=master)](https://travis-ci.com/kddeisz/snip_snip)
-[![Coverage Status](https://coveralls.io/repos/github/kddeisz/snip_snip/badge.svg?branch=master)](https://coveralls.io/github/kddeisz/snip_snip?branch=master)
 
 SnipSnip tells you what you selected that you shouldn't have in a Rails controller action.
 
@@ -17,6 +16,10 @@ Open `snip-snip.log`:
 
 Hit a controller action and see the output.
 
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/kddeisz/snip_snip.
+
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The code is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
