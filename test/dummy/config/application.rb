@@ -6,16 +6,16 @@ ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../../Gemfile', __dir__)
 require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 $LOAD_PATH.unshift File.expand_path('../../../lib', __dir__)
 
-require 'rails/all'
+require 'rails'
+require 'active_model/railtie'
+require 'active_record/railtie'
+require 'rails/test_unit/railtie'
 
 Bundler.require(*Rails.groups)
-require 'snip_snip'
+# require 'snip_snip'
 
 module Dummy
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
-
     # Settings in config/environments/* take precedence over those specified
     # here.
     # Application configuration should go into files in config/initializers
