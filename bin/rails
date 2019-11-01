@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 #!/usr/bin/env ruby
 # This command will automatically be run when you run "rails" with Rails gems
 # installed from the root of your application.

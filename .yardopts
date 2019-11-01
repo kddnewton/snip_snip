@@ -1,7 +1,0 @@
---title 'SnipSnip'
---markup markdown
---quiet
---output-dir docs
---list-undoc
--
-MIT-LICENSE
