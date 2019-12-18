@@ -4,11 +4,23 @@
 
 SnipSnip tells you what you selected that you shouldn't have in a Rails controller action.
 
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'snip_snip'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install snip_snip
+
 ## Usage
-
-Add `SnipSnip` to your Gemfile:
-
-    $ gem 'snip_snip', group: %i[test development]
 
 Open `snip-snip.log`:
 
