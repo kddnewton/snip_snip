@@ -21,6 +21,17 @@ module SnipSnip
       assert_equal [ActiveRecord::InternalMetadata], Filter.new.filtered
     end
 
+    test '#initialize with no internal metadata' do
+      internal_metadata = ActiveRecord::InternalMetadata
+
+      begin
+        ActiveRecord.send(:remove_const, :InternalMetadata)
+        assert_empty Filter.new.filtered
+      ensure
+        ActiveRecord.const_set(:InternalMetadata, internal_metadata)
+      end
+    end
+
     test '#filtered?' do
       filter = Filter.new([Post])
 

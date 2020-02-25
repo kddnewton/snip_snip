@@ -39,6 +39,12 @@ module SnipSnip
       assert_kind_of Registry, Registry.instance
     end
 
+    test 'raises method missing on invalid method' do
+      assert_raises NoMethodError do
+        Registry.foo
+      end
+    end
+
     private
 
     def registry_with(records)
