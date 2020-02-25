@@ -5,6 +5,7 @@ jobs:
     name: CI
     runs-on: ubuntu-latest
     steps:
+    - run: sudo apt-get install libsqlite3-dev
     - uses: actions/checkout@master
     - uses: ruby/setup-ruby@v1
       with:
