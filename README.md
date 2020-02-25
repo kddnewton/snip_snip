@@ -1,6 +1,7 @@
 # SnipSnip
 
-[![Build Status](https://travis-ci.com/kddeisz/snip_snip.svg?branch=master)](https://travis-ci.com/kddeisz/snip_snip)
+[![Build Status](https://github.com/kddeisz/snip_snip/workflows/Main/badge.svg)](https://github.com/kddeisz/snip_snip/actions)
+[![Gem Version](https://img.shields.io/gem/v/snip_snip.svg)](https://rubygems.org/gems/snip_snip)
 
 SnipSnip tells you what you selected that you shouldn't have in a Rails controller action.
 
