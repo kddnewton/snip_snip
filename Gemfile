@@ -4,4 +4,4 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'rails', '~> 6.0.2'
+gem 'rails', '~> 6.0.3.rc1'
