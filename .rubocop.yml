@@ -3,4 +3,28 @@ AllCops:
   DisplayStyleGuide: true
   TargetRubyVersion: 2.7
   Exclude:
-  - 'vendor/**/*'
+  - '{tmp,vendor,yard}/**/*'
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 80
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FormatString:
+  EnforcedStyle: percent
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
