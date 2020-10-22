@@ -43,8 +43,8 @@ module SnipSnip
       end
 
       # Respond to all of the missing methods on the singleton instance.
-      def respond_to_missing?(method)
-        instance.respond_to?(method)
+      def respond_to_missing?(method, include_private = false)
+        instance.respond_to?(method) || super
       end
     end
   end
