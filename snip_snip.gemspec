@@ -6,8 +6,8 @@ require 'snip_snip/version'
 Gem::Specification.new do |spec|
   spec.name        = 'snip_snip'
   spec.version     = SnipSnip::VERSION
-  spec.authors     = ['Kevin Deisz']
-  spec.email       = ['kevin.deisz@gmail.com']
+  spec.authors     = ['Kevin Newton']
+  spec.email       = ['kddnewton@gmail.com']
   spec.homepage    = 'https://github.com/kddeisz/snip_snip'
   spec.summary     = 'SnipSnip cuts the deadweight'
   spec.description = "Lets you know what you selected that you shouldn't have"
