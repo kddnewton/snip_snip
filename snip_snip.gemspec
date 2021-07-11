@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version     = SnipSnip::VERSION
   spec.authors     = ['Kevin Newton']
   spec.email       = ['kddnewton@gmail.com']
-  spec.homepage    = 'https://github.com/kddeisz/snip_snip'
+  spec.homepage    = 'https://github.com/kddnewton/snip_snip'
   spec.summary     = 'SnipSnip cuts the deadweight'
   spec.description = "Lets you know what you selected that you shouldn't have"
   spec.license     = 'MIT'

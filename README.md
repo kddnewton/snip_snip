@@ -1,6 +1,6 @@
 # SnipSnip
 
-[![Build Status](https://github.com/kddeisz/snip_snip/workflows/Main/badge.svg)](https://github.com/kddeisz/snip_snip/actions)
+[![Build Status](https://github.com/kddnewton/snip_snip/workflows/Main/badge.svg)](https://github.com/kddnewton/snip_snip/actions)
 [![Gem Version](https://img.shields.io/gem/v/snip_snip.svg)](https://rubygems.org/gems/snip_snip)
 
 SnipSnip tells you what you selected that you shouldn't have in a Rails controller action.
@@ -31,7 +31,7 @@ Hit a controller action and see the output.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kddeisz/snip_snip.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kddnewton/snip_snip.
 
 ## License
 
