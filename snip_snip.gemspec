@@ -1,19 +1,28 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.push File.expand_path('lib', __dir__)
-require 'snip_snip/version'
+require_relative 'lib/snip_snip/version'
+
+version = SnipSnip::VERSION
+repository = 'https://github.com/kddnewton/snip_snip'
 
 Gem::Specification.new do |spec|
   spec.name        = 'snip_snip'
-  spec.version     = SnipSnip::VERSION
+  spec.version     = version
   spec.authors     = ['Kevin Newton']
   spec.email       = ['kddnewton@gmail.com']
-  spec.homepage    = 'https://github.com/kddnewton/snip_snip'
+
+  spec.homepage    = repository
   spec.summary     = 'SnipSnip cuts the deadweight'
   spec.description = "Lets you know what you selected that you shouldn't have"
   spec.license     = 'MIT'
 
   spec.files = Dir['lib/**/*', 'LICENSE', 'Rakefile', 'README.md']
+  spec.metadata = {
+    'bug_tracker_uri' => "#{repository}/issues",
+    'changelog_uri' => "#{repository}/blob/v#{version}/CHANGELOG.md",
+    'source_code_uri' => repository,
+    'rubygems_mfa_required' => 'true'
+  }
 
   spec.add_dependency 'rails', '>= 5.0.0.beta'
 
